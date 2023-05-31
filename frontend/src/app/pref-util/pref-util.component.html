@@ -1,0 +1,23 @@
+<body>
+    <div *ngIf="utilizador">
+        <h2>{{utilizador.userId | uppercase}}'s Profile</h2>
+        <img [src]="utilizador.imagemDePerfil" alt="Imagem de perfil do utilizador">
+
+        <p></p>
+        <a type="button" onclick="alert('Com mais desenvolvimento do projeto, é suposto levar para as Listas do utilizador')">Listas</a>
+
+        <a type="button" onclick="alert('Com mais desenvolvimento do projeto, é suposto levar para a Biblioteca de Items do utilizador')">Biblioteca de Items</a>
+
+        <a type="button" onclick="alert('Com mais desenvolvimento do projeto, é suposto levar para a lista de seguidores do utilizador')">Seguidores</a>
+
+        <a type="button" onclick="alert('Com mais desenvolvimento do projeto, é suposto levar para a lista de a seguir do utilizador')">A seguir</a>
+
+        <a type="button" routerLink="../wishlist">Wishlist</a>
+
+        <h3>Alterar Dados do prefil</h3>
+        <a routerLink="../prof-sets/{{utilizador._id}}">
+            <h3>Alterar Dados</h3>
+        </a>
+
+    </div>
+</body>

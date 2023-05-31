@@ -1,0 +1,19 @@
+body {
+    font-family: "Comic Sans MS";
+    color: white;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-group label {
+    flex-basis: 25%;
+    margin-right: 1rem;
+}
+
+.form-group input {
+    flex-basis: 75%;
+}

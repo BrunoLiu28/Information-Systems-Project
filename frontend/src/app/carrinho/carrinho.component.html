@@ -1,0 +1,14 @@
+<body>
+<h1>O seu carrinho de compras</h1>
+<h3 >Número de items no carrinho: {{ utilizador?.carrinho?.length }}</h3>
+
+<ul class="listas"*ngIf="utilizador?.carrinho && utilizador?.carrinho?.length !== undefined">
+  <li *ngFor="let item of utilizador?.carrinho; let i = index">
+    <div class="lista-details" >
+      <a routerLink="../item/{{item?._id}}">
+        <span class="lista-name">{{item?.nome}}</span>
+      </a>
+    </div>
+  </li>
+</ul>
+</body>

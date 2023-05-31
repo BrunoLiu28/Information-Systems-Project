@@ -1,0 +1,26 @@
+<body>
+<div *ngIf="utilizador">
+    <h1>A sua wishlist</h1>
+    <h3 >Número de items na wishlist: {{ utilizador.wishlist.length }}</h3>
+
+    <ng-container *ngIf="utilizador.wishlist.length > 0; else noItems">
+        <ul class="listas">
+            <li *ngFor="let item of utilizador?.wishlist; let i = index">
+                <div class="lista-details">
+                    <a routerLink="../item/{{item?._id}}">
+                        <span class="lista-name">{{item?.nome}}</span>
+                    </a>
+                    <button type="button" class="delete" title="delete hero"
+                            (click)="removerItem(i)">x</button>
+                </div>
+            </li>
+        </ul>
+    </ng-container>
+
+    <ng-template #noItems>
+        <h3>There are no items in the wishlist.</h3>
+    </ng-template>
+</div>
+
+</body>
+

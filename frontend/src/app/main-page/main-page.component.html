@@ -1,0 +1,11 @@
+<body>
+<h1>Bem vindo {{utilizador?.userId}}</h1>
+<nav>
+  <a [routerLink]="['dashboard']">Dashboard</a>
+  <a [routerLink]="['items']">Items</a>
+  <a [routerLink]="['profile']">Profile</a>
+  <a [routerLink]="['carrinho']">Carrinho</a>
+</nav>
+<router-outlet></router-outlet>
+</body>
+

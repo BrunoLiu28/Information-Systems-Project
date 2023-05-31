@@ -1,0 +1,24 @@
+img {
+  width: 300px;
+  height: auto;
+  border: 4px solid #000;
+}
+
+body {
+    font-family: "Comic Sans MS";
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.left-column {
+    grid-column: 1 / 2;
+}
+
+.right-column {
+    grid-column: 2 / 3;
+}

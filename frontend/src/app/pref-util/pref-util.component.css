@@ -1,0 +1,46 @@
+body {
+    font-family: "Comic Sans MS";
+    color: white;
+}
+
+img {
+    width: 225px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #000;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    background-color: #3f525c;
+    border-radius: 2px;
+    padding: 0.1cm;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    min-width: 70px;
+    margin: 1vh;
+    box-sizing: border-box;
+
+    /* flexbox */
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+@media (min-width: 600px) {
+    a {
+        width: 18%;
+        box-sizing: content-box;
+    }
+}
+
+a:hover {
+    background-color: black;
+}

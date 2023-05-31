@@ -1,0 +1,139 @@
+body {
+    font-family: "Comic Sans MS";
+    color: white;
+}
+
+.items {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+}
+
+a {
+    background-color: white;
+}
+
+.items li {
+    position: relative;
+    cursor: pointer;
+}
+
+.items li:hover {
+    left: .1em;
+}
+
+.items a {
+    color: #333;
+    text-decoration: none;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.items a:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+
+}
+
+.items a:active {
+    background-color: #525252;
+    color: #fafafa;
+
+}
+
+.items a {
+    padding-left: 15px;
+
+}
+
+
+.add-button {
+    padding: .5rem 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.add-button:hover {
+    color: white;
+    background-color: #42545C;
+
+}
+
+button.delete {
+    position: absolute;
+    left: 210px;
+    top: 5px;
+    background-color: white;
+    color:  #525252;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 1px 10px 3px 10px;
+}
+
+button.delete:hover {
+    background-color: #525252;
+    color: white;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+
+}
+input {
+  padding: .5rem;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  display: block;
+}
+
+input:focus {
+  outline: #336699 auto 1px;
+}
+
+li {
+  list-style-type: none;
+}
+.search-result li a {
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  padding: .5rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}
+
+.search-result li a:hover {
+  background-color: #435A60;
+  color: white;
+}
+
+ul.search-result {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+

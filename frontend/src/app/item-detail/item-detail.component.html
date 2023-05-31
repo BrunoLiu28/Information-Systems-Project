@@ -1,0 +1,45 @@
+<body>
+    <div class="grid-container" *ngIf="item">
+        <div class="left-column">
+            <button type="button" class="goBack" title="Go back"
+                    (click)="goBack()">Go back</button>
+            <h2>{{item.nome | uppercase}} Details</h2>
+            <div ng-app="myApp" ng-controller="myCtrl">
+                <p>Nome do item: {{item.nome}}</p>
+                <p>Descrição do item: {{item.descricao}}</p>
+                <p>Tipo do item: {{item.tipo}}</p>
+                <p>Plataforma onde o item está disponível: {{item.plataforma}}</p>
+                <p>Idiomas que o item possui: {{item.idiomas}}</p>
+                <p>Preço do item: {{item.preco}}</p>
+                {{get_count()}}
+                <p>Avaliacoes: <br>
+                    <span *ngFor="let rating of ratingCounts; let i = index">
+                    {{i+1}} ⭐ - {{ rating }}<br>
+              </span>
+                </p>
+                <p>Item Classificacao Geral: {{get_classificacao_Geral()}} ⭐</p>
+            </div>
+            <button type="button" class="addCarrinho" title="Adicionar ao carrinho"
+                    (click)="addCarrinho(item)">Adicionar ao carrinho</button>
+            <button type="button" class="addWhislist" title="Adicionar a lista de desejos"
+                    (click)="addWhishlist(item)">Adicionar a lista de desejos</button>
+        </div>
+        <div class="right-column">
+            <h3>Imagem principal: </h3>
+            <img [src]="item.imagemPrincipal" alt="Imagem Pricipal do Item">
+            <h3>Imagens ilustrativas:</h3>
+            <div *ngIf="item.imagensIlustrativas.length > 0; else noImages">
+                <h4>Imagem {{currentImageIndex+1}}</h4>
+                <img [src]="item.imagensIlustrativas[currentImageIndex]" />
+                <div>
+                    <button (click)="previousImage()" >Previous</button>
+                    <button (click)="nextImage()" >Next</button>
+                </div>
+            </div>
+            <ng-template #noImages>
+                <p>Sem imagens ilustrativas.</p>
+            </ng-template>
+
+        </div>
+    </div>
+</body>

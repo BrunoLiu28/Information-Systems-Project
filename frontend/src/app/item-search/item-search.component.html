@@ -1,0 +1,36 @@
+<body>
+<div id="search-component">
+
+  <h2>Item Search</h2>
+
+  <form>
+    <div class="form-group">
+      <input type="text" name="searchText" placeholder="Search" [(ngModel)]="searchText" (input)="filterItems()" />
+    </div>
+  </form>
+
+  <ul class="search-result">
+    <ng-container *ngIf="filteredItems.length > 0; else noResults">
+      <li *ngFor="let item of filteredItems">
+        <a routerLink="../item/{{item._id}}">
+          {{item.nome}}
+        </a>
+      </li>
+    </ng-container>
+
+    <ng-template #noResults>
+      <h3> Nenhum item encontrado.</h3>
+      <h3> Estes sao os items todos existentes:</h3>
+      <ul class="items" *ngIf="items && items.length > 0">
+          <li *ngFor="let item of items; let i = index">
+              <a routerLink="../item/{{item?._id}}">
+                  {{item.nome}}
+              </a>
+          </li>
+      </ul>
+      <h3 *ngIf="items && items.length == 0">No items found.</h3>
+    </ng-template>
+  </ul>
+
+</div>
+</body>
