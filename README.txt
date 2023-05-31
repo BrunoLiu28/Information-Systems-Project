@@ -4,6 +4,7 @@ Resources Used:
 	MEAN Stack - Mongo Database, Express, Angular and Node.
 	HTML
 	CSS
+	TypeScript
 
 How to execute the project:
 	In the backend directory:
